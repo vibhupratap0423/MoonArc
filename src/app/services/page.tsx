@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const ServicesPage = () => {
   return (
-    <main className="bg-gradient-to-br from-[#0c1222] to-[#141c33] text-white">
+    <main className="bg-white text-black">
       
       {/* Section 1: Services Overview */}
       <motion.section
@@ -15,10 +15,10 @@ const ServicesPage = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Services That <span className="text-purple-400">Scale</span> Businesses
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-purple-600">
+          Services That <span className="text-purple-800">Scale</span> Businesses
         </h1>
-        <p className="text-gray-300 max-w-3xl mx-auto mb-12">
+        <p className="text-black max-w-3xl mx-auto mb-12">
           From startup launch to enterprise expansion, we offer comprehensive digital marketing solutions that drive measurable growth at every stage of your journey.
         </p>
 
@@ -45,7 +45,7 @@ const ServicesPage = () => {
           ].map((service, i) => (
             <motion.div
               key={i}
-              className="bg-[#1f263f] p-6 rounded-2xl shadow-md hover:shadow-purple-600/30 transition-all"
+              className="bg-gray-100 p-6 rounded-2xl shadow-md hover:shadow-purple-300 transition-all"
               whileHover={{ scale: 1.03 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -53,9 +53,9 @@ const ServicesPage = () => {
               viewport={{ once: true }}
             >
               <p className="text-3xl mb-2">{service.emoji}</p>
-              <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-              <p className="text-gray-300 mb-4">{service.desc}</p>
-              <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+              <h3 className="text-xl font-bold mb-2 text-purple-600">{service.title}</h3>
+              <p className="text-black mb-4">{service.desc}</p>
+              <ul className="text-sm text-black space-y-1 list-disc list-inside">
                 {service.bullets.map((b) => <li key={b}>{b}</li>)}
               </ul>
             </motion.div>
@@ -75,11 +75,11 @@ const ServicesPage = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl font-bold mb-2">Social Media Marketing</h2>
-          <p className="text-gray-300 mb-4">
+          <h2 className="text-2xl font-bold mb-2 text-purple-600">Social Media Marketing</h2>
+          <p className="text-black mb-4">
             Build a community of brand advocates and turn social media into your most powerful sales channel.
           </p>
-          <ul className="text-sm text-purple-300 space-y-2 list-disc list-inside">
+          <ul className="text-sm text-black space-y-2 list-disc list-inside">
             <li>Platform-specific content strategies</li>
             <li>Influencer partnership programs</li>
             <li>Community management & engagement</li>
@@ -88,21 +88,21 @@ const ServicesPage = () => {
         </motion.div>
 
         <motion.div
-          className="bg-[#1f263f] rounded-xl p-6 text-sm space-y-2"
+          className="bg-gray-100 rounded-xl p-6 text-sm space-y-2"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-lg font-semibold mb-4">Social Media ROI</h3>
+          <h3 className="text-lg font-semibold mb-4 text-purple-600">Social Media ROI</h3>
           {[
             ['Engagement Rate', '+340%'],
             ['Follower Growth', '+250%'],
             ['Social Traffic', '+180%'],
             ['Conversion Rate', '+120%']
           ].map(([label, value]) => (
-            <div className="flex justify-between text-gray-300" key={label}>
+            <div className="flex justify-between text-black" key={label}>
               <span>{label}</span>
-              <span className="text-purple-400 font-bold">{value}</span>
+              <span className="text-purple-600 font-bold">{value}</span>
             </div>
           ))}
         </motion.div>
@@ -116,12 +116,12 @@ const ServicesPage = () => {
         viewport={{ once: true }}
       >
         <motion.div
-          className="bg-[#1f263f] rounded-xl p-6"
+          className="bg-gray-100 rounded-xl p-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-lg font-semibold mb-4">Email Marketing Performance</h3>
+          <h3 className="text-lg font-semibold mb-4 text-purple-600">Email Marketing Performance</h3>
           <div className="grid grid-cols-2 gap-4">
             {[
               { title: '45%', label: 'Open Rate' },
@@ -131,7 +131,7 @@ const ServicesPage = () => {
             ].map((item) => (
               <motion.div
                 key={item.label}
-                className="bg-purple-500 text-white rounded-md py-4 text-center font-bold hover:bg-purple-600 transition"
+                className="bg-purple-600 text-white rounded-md py-4 text-center font-bold hover:bg-purple-700 transition"
                 whileHover={{ scale: 1.05 }}
               >
                 {item.title}
@@ -146,11 +146,11 @@ const ServicesPage = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl font-bold mb-2">Email Marketing Automation</h2>
-          <p className="text-gray-300 mb-4">
+          <h2 className="text-2xl font-bold mb-2 text-purple-600">Email Marketing Automation</h2>
+          <p className="text-black mb-4">
             Nurture leads and maximize customer lifetime value with sophisticated email marketing campaigns.
           </p>
-          <ul className="text-sm text-purple-300 space-y-2 list-disc list-inside">
+          <ul className="text-sm text-black space-y-2 list-disc list-inside">
             <li>Advanced segmentation & personalization</li>
             <li>Automated drip campaigns</li>
             <li>Behavioral trigger sequences</li>
@@ -167,8 +167,8 @@ const ServicesPage = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-2">Investment Plans</h2>
-        <p className="text-gray-400 mb-12">Choose the growth package that fits your ambition</p>
+        <h2 className="text-4xl font-bold mb-2 text-purple-600">Investment Plans</h2>
+        <p className="text-black mb-12">Choose the growth package that fits your ambition</p>
 
         <div className="grid md:grid-cols-3 gap-8 text-left">
           {[
@@ -195,7 +195,7 @@ const ServicesPage = () => {
           ].map((plan,) => (
             <motion.div
               key={plan.name}
-              className={`rounded-xl p-6 bg-[#1f263f] border relative ${
+              className={`rounded-xl p-6 bg-gray-100 border relative ${
                 plan.highlight ? 'border-purple-500' : 'border-transparent'
               }`}
               whileHover={{ scale: 1.02 }}
@@ -206,9 +206,9 @@ const ServicesPage = () => {
                   {plan.tag}
                 </span>
               )}
-              <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
-              <p className="text-2xl font-bold mb-4 text-purple-400">{plan.price}</p>
-              <ul className="text-sm text-gray-300 space-y-2 mb-6">
+              <h3 className="text-xl font-bold mb-2 text-purple-600">{plan.name}</h3>
+              <p className="text-2xl font-bold mb-4 text-purple-600">{plan.price}</p>
+              <ul className="text-sm text-black space-y-2 mb-6">
                 {plan.features.map((f) => (
                   <li key={f}>✔ {f}</li>
                 ))}

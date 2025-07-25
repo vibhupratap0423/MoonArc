@@ -13,14 +13,14 @@ const StrategyFramework = () => {
   }
 
   const funnelSteps = [
-    { title: 'AWARENESS', sub: '10,000 Prospects', bg: 'bg-purple-500', text: 'text-white' },
-    { title: 'INTEREST', sub: '3,000 Engaged', bg: 'bg-purple-500', text: 'text-white' },
-    { title: 'CONSIDERATION', sub: '1,000 Qualified', bg: 'bg-purple-500', text: 'text-white' },
+    { title: 'AWARENESS', sub: '10,000 Prospects', bg: 'bg-purple-600', text: 'text-white' },
+    { title: 'INTEREST', sub: '3,000 Engaged', bg: 'bg-purple-600', text: 'text-white' },
+    { title: 'CONSIDERATION', sub: '1,000 Qualified', bg: 'bg-purple-600', text: 'text-white' },
     { title: 'CONVERSION', sub: '300 Customers', bg: 'bg-purple-300', text: 'text-black' }
   ]
 
   return (
-    <section className="bg-gradient-to-b from-[#0c1222] to-[#141c33] text-white py-20 px-6 md:px-16">
+    <section className="bg-white text-black py-20 px-6 md:px-16">
       <div className="grid md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <motion.div
@@ -30,7 +30,7 @@ const StrategyFramework = () => {
           className="space-y-6"
         >
           <motion.h2
-            className="text-4xl font-bold mb-6"
+            className="text-4xl font-bold mb-6 text-purple-700"
             variants={fadeUp}
             custom={0}
           >
@@ -52,21 +52,23 @@ const StrategyFramework = () => {
             }
           ].map((item, i) => (
             <motion.div key={i} variants={fadeUp} custom={i + 1}>
-              <p className="text-purple-400 font-bold">{item.step}</p>
-              <p className="text-gray-300">{item.desc}</p>
+              <p className="text-purple-600 font-bold">{item.step}</p>
+              <p className="text-gray-700">{item.desc}</p>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Right Funnel Card */}
         <motion.div
-          className="bg-[#1f263f] p-6 rounded-xl shadow-md"
+          className="bg-gray-100 p-6 rounded-xl shadow-md"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h4 className="text-xl font-bold mb-4 text-center">Marketing Funnel Visualization</h4>
+          <h4 className="text-xl font-bold mb-4 text-center text-purple-700">
+            Marketing Funnel Visualization
+          </h4>
           <div className="space-y-4">
             {funnelSteps.map((step, index) => (
               <motion.div
@@ -75,7 +77,8 @@ const StrategyFramework = () => {
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
-                {step.title}<br />
+                {step.title}
+                <br />
                 <span className="text-sm opacity-80">{step.sub}</span>
               </motion.div>
             ))}

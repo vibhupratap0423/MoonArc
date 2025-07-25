@@ -12,27 +12,31 @@ const tools = [
   { name: 'Zapier', icon: 'Z' }         
 ]
 
-
 const ToolsTech = () => {
   return (
-    <section className="bg-[#0e1525] text-white py-20 px-6 md:px-16">
+    <section className="bg-white text-black py-20 px-6 md:px-16">
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold mb-2">Cutting-Edge Tools & Technologies</h2>
-        <p className="text-gray-300">We leverage the most advanced marketing technologies to deliver superior results</p>
+        <h2 className="text-4xl font-bold mb-2 text-purple-700">
+          Cutting-Edge Tools & Technologies
+        </h2>
+        <p className="text-gray-700">
+          We leverage the most advanced marketing technologies to deliver superior results
+        </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-4 text-center text-sm font-medium text-gray-200">
+
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-4 text-center text-sm font-medium text-gray-800">
         {tools.map((tool, index) => (
           <motion.div
             key={tool.name}
-            className="bg-[#1f263f] p-4 rounded-lg flex flex-col items-center gap-2 hover:bg-[#252d47] transition duration-300"
+            className="bg-gray-100 p-4 rounded-lg flex flex-col items-center gap-2 hover:bg-gray-200 transition duration-300 shadow"
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="text-2xl">{tool.icon}</div>
-            <span>{tool.name}</span>
+            <div className="text-2xl text-purple-700">{tool.icon}</div>
+            <span className="text-black">{tool.name}</span>
           </motion.div>
         ))}
       </div>
@@ -41,4 +45,3 @@ const ToolsTech = () => {
 }
 
 export default ToolsTech
-

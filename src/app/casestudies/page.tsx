@@ -3,42 +3,48 @@ import React from 'react';
 
 const CaseStudiesPage = () => {
   return (
-    <main className="bg-gradient-to-br from-[#0c1222] to-[#141c33] text-white">
+    <main className="bg-white text-black">
 
       {/* Section 1: Intro */}
       <section className="px-6 md:px-16 py-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Success <span className="text-purple-400">Stories</span> That Inspire
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-purple-600">
+          Success <span className="text-purple-800">Stories</span> That Inspire
         </h1>
-        <p className="text-gray-300 max-w-2xl mx-auto">
+        <p className="text-black max-w-2xl mx-auto">
           Real results from real businesses. See how we&apos;ve transformed companies across industries with our proven growth strategies.
         </p>
       </section>
 
       {/* Section 2: Featured Case */}
       <section className="px-6 md:px-16 pb-16">
-        <div className="bg-[#1f263f] p-8 rounded-2xl grid md:grid-cols-2 gap-10">
+        <div className="bg-gray-100 p-8 rounded-2xl grid md:grid-cols-2 gap-10 shadow">
           <div>
-            <p className="text-sm font-bold text-purple-400 uppercase mb-2">Featured Success Story</p>
-            <h2 className="text-2xl font-bold mb-4">TechStart SaaS: From $0 to $2M ARR in 18 Months</h2>
-            <p className="text-gray-300 mb-6">A B2B SaaS startup struggling to find product-market fit. We implemented a comprehensive growth strategy that resulted in explosive revenue growth.</p>
+            <p className="text-sm font-bold text-purple-600 uppercase mb-2">Featured Success Story</p>
+            <h2 className="text-2xl font-bold mb-4 text-purple-800">
+              TechStart SaaS: From $0 to $2M ARR in 18 Months
+            </h2>
+            <p className="text-black mb-6">
+              A B2B SaaS startup struggling to find product-market fit. We implemented a comprehensive growth strategy that resulted in explosive revenue growth.
+            </p>
             <div className="flex gap-10">
               <div>
-                <p className="text-green-400 text-2xl font-bold">2,400%</p>
-                <p className="text-sm text-gray-400">Revenue Growth</p>
+                <p className="text-green-600 text-2xl font-bold">2,400%</p>
+                <p className="text-sm text-black">Revenue Growth</p>
               </div>
               <div>
-                <p className="text-green-400 text-2xl font-bold">850%</p>
-                <p className="text-sm text-gray-400">Lead Generation</p>
+                <p className="text-green-600 text-2xl font-bold">850%</p>
+                <p className="text-sm text-black">Lead Generation</p>
               </div>
             </div>
           </div>
           <div className="space-y-4 text-sm">
-            <div className="bg-gray-800 p-4 rounded-md">
-              <p className="font-bold">Challenge</p>
-              <p>Low brand awareness, poor conversion rates, and limited marketing budget</p>
+            <div className="bg-gray-200 p-4 rounded-md">
+              <p className="font-bold text-purple-700">Challenge</p>
+              <p className="text-black">
+                Low brand awareness, poor conversion rates, and limited marketing budget
+              </p>
             </div>
-            <div className="bg-purple-500 text-white p-4 rounded-md">
+            <div className="bg-purple-600 text-white p-4 rounded-md">
               <p className="font-bold">Solution</p>
               <p>Multi-channel growth strategy with focus on content marketing and paid acquisition</p>
             </div>
@@ -73,12 +79,12 @@ const CaseStudiesPage = () => {
               stats: ['Property Listings: +200%', 'Transactions: +180%', 'Expansion: 15 Cities'],
             },
           ].map((item) => (
-            <div key={item.title} className="bg-[#1f263f] p-6 rounded-xl">
+            <div key={item.title} className="bg-gray-100 p-6 rounded-xl shadow">
               <p className="text-2xl">{item.emoji}</p>
-              <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-300 mb-4">{item.desc}</p>
-              <ul className="text-sm text-green-400 space-y-1">
-                {item.stats.map((s) => <li key={s}>{s}</li>)}
+              <h3 className="font-bold text-lg mb-2 text-purple-700">{item.title}</h3>
+              <p className="text-sm text-black mb-4">{item.desc}</p>
+              <ul className="text-sm text-green-600 space-y-1">
+                {item.stats.map((s) => <li key={s}>✔ {s}</li>)}
               </ul>
             </div>
           ))}
@@ -86,9 +92,11 @@ const CaseStudiesPage = () => {
       </section>
 
       {/* Section 4: Testimonials */}
-      <section className="px-6 md:px-16 py-20 bg-[#0e1525] text-center">
-        <h2 className="text-4xl font-bold mb-2">What Our Clients Say</h2>
-        <p className="text-gray-400 mb-12">Don&apos;t just take our word for it—hear from the businesses we&apos;ve transformed</p>
+      <section className="px-6 md:px-16 py-20 bg-gray-50 text-center">
+        <h2 className="text-4xl font-bold mb-2 text-purple-600">What Our Clients Say</h2>
+        <p className="text-black mb-12">
+          Don&apos;t just take our word for it—hear from the businesses we&apos;ve transformed
+        </p>
 
         <div className="grid md:grid-cols-2 gap-8 text-left">
           {[
@@ -113,12 +121,12 @@ const CaseStudiesPage = () => {
               review: 'The team at PurpleEdge doesn\'t just deliver campaigns—they deliver growth. Their strategic thinking and flawless execution have exceeded every expectation.',
             },
           ].map((client) => (
-            <div key={client.name} className="bg-[#1f263f] p-6 rounded-xl">
+            <div key={client.name} className="bg-gray-100 p-6 rounded-xl shadow">
               <div className="text-3xl mb-2">🧑‍💼</div>
-              <h4 className="text-lg font-semibold">{client.name}</h4>
-              <p className="text-sm text-purple-400 mb-2">{client.title}</p>
-              <p className="text-gray-300 text-sm mb-3">{client.review}</p>
-              <div className="text-yellow-400 text-lg">★★★★★</div>
+              <h4 className="text-lg font-semibold text-purple-700">{client.name}</h4>
+              <p className="text-sm text-purple-600 mb-2">{client.title}</p>
+              <p className="text-black text-sm mb-3">{client.review}</p>
+              <div className="text-yellow-500 text-lg">★★★★★</div>
             </div>
           ))}
         </div>
